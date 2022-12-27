@@ -1,3 +1,5 @@
 from django.contrib import admin
+from home.models import available_rooms
 
-# Register your models here.
+
+admin.site.register(available_rooms)
