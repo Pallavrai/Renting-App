@@ -8,9 +8,9 @@ Url routes :<br />
 |-----> publish/     (for publishing new ad)<br />
 |<br />
 |----->profile/<br />
-            |<br />
-            |------>(userid in int)/<br />
-            |------>create/      (for creating new user profile with bio)<br />
+            &ensp;|<br />
+            &ensp;|------>(userid in int)/<br />
+            &ensp;|------>create/      (for creating new user profile with bio)<br />
 <br />
 Coming soon !!<br />
 
