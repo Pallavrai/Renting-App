@@ -1,10 +1,18 @@
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from home.serializers import AvailroomsSerializer
-from home.models import available_rooms
+from home.models import available_room
+from rest_framework import generics
 
-@api_view(['GET'])
-def home(request):
-    instance=available_rooms.objects.all()
-    s=AvailroomsSerializer(instance,many=True).data
-    return Response(s)
+
+class RoomslistView(generics.ListAPIView):
+    queryset=available_room.objects.all()
+    serializer_class=AvailroomsSerializer
+
+rooms_list=RoomslistView.as_view()
+
+class CreateAdView(generics.CreateAPIView):
+    queryset=available_room.objects.all()
+    serializer_class=AvailroomsSerializer
+
+create_ad=CreateAdView.as_view()
