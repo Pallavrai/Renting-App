@@ -27,6 +27,7 @@ Coming soon !!<br />
 - [ ] Owners requirements.
 - [ ] Review on specific property.
 - [ ] Pay and become instant tenant or approach property offline without any gaurantee of free space.
+- [x] works
 
 
 
