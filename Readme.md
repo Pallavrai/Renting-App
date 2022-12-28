@@ -8,26 +8,25 @@ Url routes :<br />
 |-----> publish/     (for publishing new ad)<br />
 |<br />
 |----->profile/<br />
-            &ensp;|<br />
-            &ensp;|------>(userid in int)/<br />
-            &ensp;|------>create/      (for creating new user profile with bio)<br />
+            &emsp;&emsp;|<br />
+            &emsp;&emsp;|------>(userid in int)/<br />
+            &emsp;&emsp;|------>create/      (for creating new user profile with bio)<br />
 <br />
 Coming soon !!<br />
 
 
 # GUI Requirements
 <br />
-- [ ] Maps with houses and vacant space numbers.
-- [ ] Locality stats in future updates(property prices).
-- [ ] Data feeding module.
-- [ ] Rewarding system for data agents.
-- [ ] Allow owners to register.
-- [ ] Special features for students sharing same space.
-- [ ] Students can view other members profile if they used our platform.
-- [ ] Owners requirements.
-- [ ] Review on specific property.
-- [ ] Pay and become instant tenant or approach property offline without any gaurantee of free space.
-- [x] works
+- [ ] Maps with houses and vacant space numbers.<br />
+- [ ] Locality stats in future updates(property prices).<br />
+- [ ] Data feeding module.<br />
+- [ ] Rewarding system for data agents.<br />
+- [ ] Allow owners to register.<br />
+- [ ] Special features for students sharing same space.<br />
+- [ ] Students can view other members profile if they used our platform.<br />
+- [ ] Owners requirements.<br />
+- [ ] Review on specific property.<br />
+- [ ] Pay and become instant tenant or approach property offline without any gaurantee of free space.<br />
 
 
 
