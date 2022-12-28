@@ -15,4 +15,4 @@ class CreateAdView(generics.CreateAPIView):
     queryset=available_room.objects.all()
     serializer_class=AvailroomsSerializer
 
-create_ad=CreateAdView.as_view()
+publish_ad=CreateAdView.as_view()
