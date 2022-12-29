@@ -9,8 +9,9 @@ Url routes :<br />
 |<br />
 |----->profile/<br />
             &emsp;&emsp;|<br />
-            &emsp;&emsp;|------>(userid in int)/<br />
+            &emsp;&emsp;|------><int:userid>/<br />
             &emsp;&emsp;|------>create/      (for creating new user profile with bio)<br />
+            &emsp;&emsp;|------>edit/<int:userid>
 <br />
 Coming soon !!<br />
 
@@ -26,7 +27,7 @@ Coming soon !!<br />
 - [ ] Students can view other members profile if they used our platform.<br />
 - [ ] Owners requirements.<br />
 - [ ] Review on specific property.<br />
-- [ ] Pay and become instant tenant or approach property offline without any gaurantee of free space.<br />
+- [ ] Pay and become instant tenant or approach property offline without any gaurantee for space.<br />
 
 
 
