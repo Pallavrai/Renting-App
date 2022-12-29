@@ -2,7 +2,7 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from home.serializers import AvailroomsSerializer
 from home.models import available_room
-from rest_framework import generics
+from rest_framework import generics,mixins
 
 
 class RoomslistView(generics.ListAPIView):
@@ -16,3 +16,17 @@ class CreateAdView(generics.CreateAPIView):
     serializer_class=AvailroomsSerializer
 
 publish_ad=CreateAdView.as_view()
+
+class UpdateAdView(mixins.UpdateModelMixin,mixins.DestroyModelMixin,generics.GenericAPIView):
+    queryset=available_room.objects.all()
+    serializer_class=AvailroomsSerializer
+    lookup_field='pk'
+
+    def delete(self,request,*args,**kwargs):
+        return self.destroy(request,*args,**kwargs)
+
+    def patch(self,request,*args,**kwargs):
+        return self.partial_update(request, *args, **kwargs)
+
+update_ad=UpdateAdView.as_view()
+
