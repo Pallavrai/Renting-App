@@ -3,7 +3,7 @@ from rest_framework.response import Response
 from home.serializers import AvailroomsSerializer
 from home.models import available_room
 from .permissions import IsownerPermission
-from rest_framework import generics,mixins,permissions
+from rest_framework import generics,mixins,permissions,authentication
 
 
 class RoomslistView(generics.ListAPIView):
@@ -22,7 +22,8 @@ class UpdateAdView(mixins.UpdateModelMixin,mixins.DestroyModelMixin,generics.Gen
     queryset=available_room.objects.all()
     serializer_class=AvailroomsSerializer
     permission_classes=[permissions.IsAdminUser,IsownerPermission]
-    
+    authentication_classes=[authentication.SessionAuthentication,authentication.TokenAuthentication]
+
     lookup_field='pk'
 
     def delete(self,request,*args,**kwargs):
