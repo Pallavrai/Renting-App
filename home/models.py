@@ -12,7 +12,7 @@ def get_coordinate():
 
 class available_room(models.Model):
     owner_id=models.ForeignKey(User,on_delete=models.CASCADE)
-    title=models.CharField(max_length=25)
+    title=models.CharField(max_length=255)
     description=models.CharField(max_length=255)
     visits=models.IntegerField()
     current_members=models.CharField(max_length=25,null=True)
