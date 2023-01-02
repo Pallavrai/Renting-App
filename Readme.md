@@ -7,11 +7,10 @@ Url routes :<br />
 |-----> ''<br />
 |-----> publish/     (for publishing new ad)<br />
 |<br />
-|----->profile/<br />
+|----->profile/<br /> (list of profiles only for admins)
             &emsp;&emsp;|<br />
-            &emsp;&emsp;|------><int:userid>/<br />
             &emsp;&emsp;|------>create/      (for creating new user profile with bio)<br />
-            &emsp;&emsp;|------>edit/<int:userid>
+            &emsp;&emsp;|------>edit/userid(int)
 <br />
 Coming soon !!<br />
 

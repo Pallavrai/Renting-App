@@ -21,7 +21,7 @@ publish_ad=CreateAdView.as_view()
 class UpdateAdView(mixins.UpdateModelMixin,mixins.DestroyModelMixin,generics.GenericAPIView):
     queryset=available_room.objects.all()
     serializer_class=AvailroomsSerializer
-    permission_classes=[permissions.IsAdminUser,permissions.IsAuthenticated,permissions.DjangoModelPermissions]
+    permission_classes=[permissions.IsAdminUser,permissions.IsAuthenticated,permissions.DjangoObjectPermissions]
     authentication_classes=[authentication.SessionAuthentication,authentication.TokenAuthentication]
 
     lookup_field='pk'
