@@ -16,7 +16,7 @@ class UserProfileView(mixins.RetrieveModelMixin,mixins.UpdateModelMixin,mixins.D
     lookup_field='user'
     permission_classes=[permissions.IsAuthenticated]
 
-    def put(self,request,*args,**kwargs):
+    def patch(self,request,*args,**kwargs):
         return self.partial_update(request,*args,**kwargs)
 
     def get(self,request,*args,**kwargs):
