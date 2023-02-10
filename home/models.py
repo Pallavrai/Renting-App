@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+import os
 
 current_status=[
     ('N','None'),
@@ -10,8 +11,12 @@ current_status=[
 def get_coordinate():
     return {'latitude':0,'longitude':0}
 
+def get_uid(instance):
+    return os.path.join('/',instance.available_room.owner_id)
+
 class available_room(models.Model):
     owner_id=models.ForeignKey(User,on_delete=models.CASCADE)
+    room_pic=models.ImageField(upload_to=get_uid,null=True)
     title=models.CharField(max_length=255)
     description=models.CharField(max_length=255)
     visits=models.IntegerField()
