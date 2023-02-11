@@ -12,7 +12,7 @@ def get_coordinate():
     return {'latitude':0,'longitude':0}
 
 def get_uid(instance,fname):
-    return os.path.join(str(instance.owner_id),fname)
+    return os.path.join(str(instance.owner_id.id),fname)
 
 class available_room(models.Model):
     owner_id=models.ForeignKey(User,on_delete=models.CASCADE)
