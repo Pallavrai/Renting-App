@@ -11,8 +11,8 @@ current_status=[
 def get_coordinate():
     return {'latitude':0,'longitude':0}
 
-def get_uid(self,instance):
-    return os.path.join('/',instance.available_room.owner_id)
+def get_uid(instance,fname):
+    return os.path.join(str(instance.owner_id),fname)
 
 class available_room(models.Model):
     owner_id=models.ForeignKey(User,on_delete=models.CASCADE)
